@@ -24,6 +24,8 @@ app.post("/bfhl", (req, res) => {
     });
   }
 
+//   initializing the variable
+
   const numbers = data.filter((item) => !isNaN(item));
   const alphabets = data.filter(
     (item) => isNaN(item) && /^[a-zA-Z]$/.test(item)
@@ -31,7 +33,7 @@ app.post("/bfhl", (req, res) => {
   const highestAlphabet = alphabets
     .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
     .slice(-1)[0];
-
+// creating the response to send 
   res.json({
     is_success: true,
     user_id: "Ayush_Gupta_10042003",
